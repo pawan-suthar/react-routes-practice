@@ -4,6 +4,7 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Navbar from './components/Navbar'
 import Ordercomplete from "./components/Ordercomplete"
+import Error from "./components/Error"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='ordercmp' element={<Ordercomplete/>}/>
+      <Route path='*' element={<Error/>}/>
     </Routes>
     </>
 
