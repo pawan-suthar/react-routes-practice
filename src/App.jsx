@@ -5,6 +5,9 @@ import About from "./components/About"
 import Navbar from './components/Navbar'
 import Ordercomplete from "./components/Ordercomplete"
 import Error from "./components/Error"
+import Students from './components/Students'
+import Newstu from './components/Newstu'
+import Oldstu from './components/Oldstu'
 
 function App() {
   return (
@@ -14,6 +17,13 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='ordercmp' element={<Ordercomplete/>}/>
+      {/* nested routes under students  */}
+      {/* students path prr aane prr hi old or new load honge  */}
+      <Route path='students' element={<Students/>}>
+        <Route path='old' element={<Oldstu/>}/>
+        <Route path='new' element={<Newstu/>}/>
+      </Route>
+
       <Route path='*' element={<Error/>}/>
     </Routes>
     </>
