@@ -8,6 +8,8 @@ import Error from "./components/Error"
 import Students from './components/Students'
 import Newstu from './components/Newstu'
 import Oldstu from './components/Oldstu'
+import User from "./components/User"
+import UsUserDetailser from "./components/UserDetails"
 
 function App() {
   return (
@@ -26,7 +28,10 @@ function App() {
         <Route path='new' element={<Newstu/>}/>
       </Route>
 
+      <Route path='users' element={<User/>}>
+      <Route path=':usrid' element={<UsUserDetailser/>}/>
       <Route path='*' element={<Error/>}/>
+      </Route>
     </Routes>
     </>
 
