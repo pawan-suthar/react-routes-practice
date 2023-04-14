@@ -20,6 +20,8 @@ function App() {
       {/* nested routes under students  */}
       {/* students path prr aane prr hi old or new load honge  */}
       <Route path='students' element={<Students/>}>
+        {/* if  want ki students pr click krte hi phle new students hi already ope ho */}
+        <Route index element={<Newstu/>}/>
         <Route path='old' element={<Oldstu/>}/>
         <Route path='new' element={<Newstu/>}/>
       </Route>
